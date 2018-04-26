@@ -18,27 +18,61 @@ console.log("Up and running!");
 //Initialize an array to store the cards
 var cards = ["queen", "queen", "king", "king"];
 
-//Initialize an array to hold the cards in play
+// //Initialize an array to hold the cards in play
 var cardsInPlay = [];
 
-//Declare cardOne and cardTwo, and assign values to them from the cards array
-var cardOne = cards[3];
-var cardTwo = cards[2];
+// //Declare cardOne and cardTwo, and assign values to them from the cards array
+// var cardOne = cards[3];
+// var cardTwo = cards[2];
 
-//Add cardOne and cardTwo to cardsInPlay
-cardsInPlay.push(cardOne);
-cardsInPlay.push(cardTwo);
+// // //Add cardOne and cardTwo to cardsInPlay
+// cardsInPlay.push(cardOne);
+// cardsInPlay.push(cardTwo);
 
-//Log the cards that the user flipped
-console.log("User flipped " + cardOne);
-console.log("User flipped " + cardTwo);
+// //Log the cards that the user flipped
+// console.log("User flipped " + cardOne);
+// console.log("User flipped " + cardTwo);
 
-//Check to see how many items are in cardsInPlay
-if (cardsInPlay.length === 2) {
-	if (cardsInPlay[0] === cardsInPlay[1]) {
-		alert("You found a match!");
+// //Check to see how many items are in cardsInPlay
+// if (cardsInPlay.length === 2) {
+// 	if (cardsInPlay[0] === cardsInPlay[1]) {
+// 		alert("You found a match!");
+// 	}
+// 	else {
+// 		alert("Sorry, try again.");
+// 	}
+// }
+
+//Unit 9
+
+//var cardId;
+
+var checkForMatch = function() {
+	if (cardsInPlay.length === 2) {
+		if (cardsInPlay[0] === cardsInPlay[1]) {
+			console.log("You found a match!");
+			alert("You found a match!");
+		}
+		else {
+			console.log("Sorry, try again.");
+			alert("Sorry, no match. Try again.");
+		}
 	}
-	else {
-		alert("Sorry, try again.");
+	else if (cardsInPlay.length < 2) {
+		console.log("Select another card.");
 	}
 }
+
+
+var flipCard = function(cardId) {
+	console.log("User flipped " + cards[cardId]);
+	cardsInPlay.push(cards[cardId]);
+	console.log(cardsInPlay);
+	checkForMatch();
+}
+
+flipCard(0);
+flipCard(2);
+
+
+
