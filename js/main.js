@@ -16,10 +16,10 @@ console.log("Up and running!");
 //Unit 8
 
 //Initialize an array to store the cards
-var cards = ["queen", "queen", "king", "king"];
+//var cards = ["queen", "queen", "king", "king"];
 
 // //Initialize an array to hold the cards in play
-var cardsInPlay = [];
+//var cardsInPlay = [];
 
 // //Declare cardOne and cardTwo, and assign values to them from the cards array
 // var cardOne = cards[3];
@@ -64,16 +64,54 @@ var checkForMatch = function() {
 }
 
 
+// var flipCard = function(cardId) {
+// 	console.log("User flipped " + cards[cardId]);
+// 	cardsInPlay.push(cards[cardId]);
+// 	console.log("Card added to hand");
+// 	checkForMatch();
+// 	console.log(cardsInPlay);
+// }
+
+// flipCard(0);
+// flipCard(2);
+
+//Unit 10
+
+var cards = [
+	{
+		rank: "queen",
+		suit: "hearts",
+		cardImage: "images/queen-of-hearts.png"
+	},
+	{
+		rank: "queen",
+		suit: "diamonds",
+		cardImage: "images/queen-of-diamonds.png"
+	},
+	{	
+		rank: "king",
+		suit: "hearts",
+		cardImage: "images/king-of-hearts.png"
+	},
+	{
+		rank: "king",
+		suit: "diamonds",
+		cardImage: "images/king-of-diamonds.png"
+	}
+];
+
+var cardsInPlay = [];
+
 var flipCard = function(cardId) {
-	console.log("User flipped " + cards[cardId]);
-	cardsInPlay.push(cards[cardId]);
+	console.log("User flipped " + cards[cardId].rank);
+	cardsInPlay.push(cards[cardId].rank);
 	console.log("Card added to hand");
+	console.log(cards[cardId].cardImage);
+	console.log(cards[cardId].suit);
 	checkForMatch();
-	console.log(cardsInPlay);
 }
 
 flipCard(0);
 flipCard(2);
-
 
 
