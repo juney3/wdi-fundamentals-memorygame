@@ -50,16 +50,16 @@ var cardsInPlay = [];
 var checkForMatch = function() {
 	if (cardsInPlay.length === 2) {
 		if (cardsInPlay[0] === cardsInPlay[1]) {
-			console.log("You found a match!");
-			alert("You found a match!");
+		console.log("You found a match!");
+		alert("You found a match!");
 		}
 		else {
-			console.log("Sorry, try again.");
-			alert("Sorry, no match. Try again.");
+		console.log("Sorry, no match. Try again.");
+		alert("Sorry, no match. Try again.");
 		}
 	}
 	else if (cardsInPlay.length < 2) {
-		console.log("Select another card.");
+		console.log("Select another card");
 	}
 }
 
@@ -67,8 +67,9 @@ var checkForMatch = function() {
 var flipCard = function(cardId) {
 	console.log("User flipped " + cards[cardId]);
 	cardsInPlay.push(cards[cardId]);
-	console.log(cardsInPlay);
+	console.log("Card added to hand");
 	checkForMatch();
+	console.log(cardsInPlay);
 }
 
 flipCard(0);
