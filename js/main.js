@@ -39,9 +39,9 @@ var cards = [
 //Initialize cards in hand
 var cardsInPlay = [];
 
-//Function to flip a card and add card to cardsInPlay. If cardsInPlay holds 2 cards, check for a match.
+//Function to flip a card and add card to cardsInPlay. If cardsInPlay holds 2 cards, check for a match
 var flipCard = function() {
-	cardId = this.getAttribute('data-id');
+	var cardId = this.getAttribute('data-id');
 	this.setAttribute('src', cards[cardId].cardImage);
 	cardsInPlay.push(cards[cardId].rank);
 	if (cardsInPlay.length === 2) {
