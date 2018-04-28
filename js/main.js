@@ -5,11 +5,9 @@ console.log("Up and running!");
 //Function to check for a match
 var checkForMatch = function() {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
-		console.log("You found a match!");
 		alert("You found a match!");
 	}
 	else {
-		console.log("Sorry, no match. Try again.");
 		alert("Sorry, no match. Try again.");
 	}
 }
@@ -41,7 +39,7 @@ var cards = [
 //Initialize cards in hand
 var cardsInPlay = [];
 
-//Function to flip a card
+//Function to flip a card and add card to cardsInPlay. If cardsInPlay holds 2 cards, check for a match.
 var flipCard = function() {
 	cardId = this.getAttribute('data-id');
 	this.setAttribute('src', cards[cardId].cardImage);
